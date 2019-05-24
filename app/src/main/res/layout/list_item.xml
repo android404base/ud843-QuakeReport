@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="#FFF7DA"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/text_background"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/tv_mag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        tools:text="8.1" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_location"
+        tools:text="Los Angeles"
+        android:layout_weight="2"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_time"
+        tools:text="Aug 19, 2012"
+        android:layout_weight="2"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        />
 
 </LinearLayout>

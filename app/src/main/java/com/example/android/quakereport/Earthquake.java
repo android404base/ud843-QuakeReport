@@ -2,17 +2,17 @@ package com.example.android.quakereport;
 
 public class Earthquake {
 
-    private int mag;
+    private String mag;
     private String location;
-    private long time;
+    private String time;
 
-    public Earthquake(int mag, String location, long time){
+    public Earthquake(String mag, String location, String time){
         this.mag = mag;
         this.location = location;
         this.time = time;
     }
 
-    public int getMag() {
+    public String getMag() {
         return mag;
     }
 
@@ -20,7 +20,7 @@ public class Earthquake {
         return location;
     }
 
-    public long getTime() {
+    public String getTime() {
         return time;
     }
 }

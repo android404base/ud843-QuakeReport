@@ -29,27 +29,22 @@ public class EarthquakeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.earthquake_activity);
+        setContentView(R.layout.earthquake_list);
 
-        // Create a fake list of earthquake locations.
-        ArrayList<String> earthquakes = new ArrayList<>();
-        earthquakes.add("San Francisco");
-        earthquakes.add("London");
-        earthquakes.add("Tokyo");
-        earthquakes.add("Mexico City");
-        earthquakes.add("Moscow");
-        earthquakes.add("Rio de Janeiro");
-        earthquakes.add("Paris");
+        ArrayList<Earthquake> earthquakeArrayList = new ArrayList<Earthquake>();
 
-        // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+        earthquakeArrayList.add(new Earthquake("8.2","Los Angeles","Aug 19, 2012"));
+        earthquakeArrayList.add(new Earthquake("5.2","Bursa","Jun 11, 2014"));
+        earthquakeArrayList.add(new Earthquake("6.5","California","May 03, 2010"));
+        earthquakeArrayList.add(new Earthquake("7.1","Amsterdam","Apr 19, 2013"));
+        earthquakeArrayList.add(new Earthquake("9.0","Lüksemburg","Jan 14, 2015"));
+        earthquakeArrayList.add(new Earthquake("4.8","San Diago","Feb 11, 2011"));
 
-        // Create a new {@link ArrayAdapter} of earthquakes
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, earthquakes);
+        EarthquakeAdapter earthquakeAdapter = new EarthquakeAdapter(this,R.layout.list_item,earthquakeArrayList,
+                R.color.colorAccent);
 
-        // Set the adapter on the {@link ListView}
-        // so the list can be populated in the user interface
-        earthquakeListView.setAdapter(adapter);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(earthquakeAdapter);
+
     }
 }
