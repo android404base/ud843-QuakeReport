@@ -31,14 +31,14 @@ public class EarthquakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_list);
 
-        ArrayList<Earthquake> earthquakeArrayList = new ArrayList<Earthquake>();
+        ArrayList<Earthquake> earthquakeArrayList = QueryUtils.extractEarthquakes();//new ArrayList<Earthquake>();
 
-        earthquakeArrayList.add(new Earthquake("8.2","Los Angeles","Aug 19, 2012"));
-        earthquakeArrayList.add(new Earthquake("5.2","Bursa","Jun 11, 2014"));
-        earthquakeArrayList.add(new Earthquake("6.5","California","May 03, 2010"));
-        earthquakeArrayList.add(new Earthquake("7.1","Amsterdam","Apr 19, 2013"));
-        earthquakeArrayList.add(new Earthquake("9.0","Lüksemburg","Jan 14, 2015"));
-        earthquakeArrayList.add(new Earthquake("4.8","San Diago","Feb 11, 2011"));
+        //earthquakeArrayList.add(new Earthquake("8.2","Los Angeles","Aug 19, 2012"));
+        //earthquakeArrayList.add(new Earthquake("5.2","Bursa","Jun 11, 2014"));
+        //earthquakeArrayList.add(new Earthquake("6.5","California","May 03, 2010"));
+        //earthquakeArrayList.add(new Earthquake("7.1","Amsterdam","Apr 19, 2013"));
+        //earthquakeArrayList.add(new Earthquake("9.0","Lüksemburg","Jan 14, 2015"));
+        //earthquakeArrayList.add(new Earthquake("4.8","San Diago","Feb 11, 2011"));
 
         EarthquakeAdapter earthquakeAdapter = new EarthquakeAdapter(this,R.layout.list_item,earthquakeArrayList,
                 R.color.colorAccent);
