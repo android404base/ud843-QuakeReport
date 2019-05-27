@@ -4,9 +4,9 @@ public class Earthquake {
 
     private String mag;
     private String location;
-    private String time;
+    private long time;
 
-    public Earthquake(String mag, String location, String time){
+    public Earthquake(String mag, String location, long time){
         this.mag = mag;
         this.location = location;
         this.time = time;
@@ -20,7 +20,7 @@ public class Earthquake {
         return location;
     }
 
-    public String getTime() {
+    public long getTime() {
         return time;
     }
 }
