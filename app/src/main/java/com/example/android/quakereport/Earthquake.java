@@ -5,11 +5,13 @@ public class Earthquake {
     private double mag;
     private String location;
     private long time;
+    private String url;
 
-    public Earthquake(double mag, String location, long time){
+    public Earthquake(double mag, String location, long time,String url){
         this.mag = mag;
         this.location = location;
         this.time = time;
+        this.url = url;
     }
 
     public double getMag() {
@@ -23,4 +25,9 @@ public class Earthquake {
     public long getTime() {
         return time;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
 }
